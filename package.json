@@ -1,0 +1,38 @@
+{
+  "name": "bracket-generator",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A Custom Bracket Generator",
+  "license": "MIT",
+  "author": "Thomas Gonda",
+  "scripts": {
+    "build": "parcel build src/client/index.html",
+    "fix": "npm run lint -- --fix",
+    "lint": "eslint --ext .js,.jsx, .",
+    "start": "parcel serve src/client/index.html --open"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@parcel/config-webextension": "^2.0.0-nightly.2151",
+    "eslint": ">=6.2.2",
+    "eslint-config-standard-kit": ">=0.14.4",
+    "eslint-plugin-import": ">=2.18.0",
+    "eslint-plugin-node": ">=9.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": ">=4.2.1",
+    "eslint-plugin-react": ">=7.14.2",
+    "eslint-plugin-simple-import-sort": ">=4.0.0",
+    "eslint-plugin-standard": ">=4.0.0",
+    "parcel": "^2.0.0-beta.1",
+    "prettier": "^1.0.0",
+    "react": ">= 16.3.0",
+    "react-dom": "^16.0.0 || ^15.5.4"
+  },
+  "dependencies": {
+    "yarn": "^1.22.10"
+  }
+}
