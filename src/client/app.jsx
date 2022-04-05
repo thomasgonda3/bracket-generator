@@ -2,9 +2,16 @@ import './app.css'
 
 import React, { Component } from 'react'
 
-export const body = {
-  margin: 0,
+import Bracket from './components/bracket.jsx'
+
+const body = {
+  margin: 0
+}
+
+const root = {
+  backgroundColor: '#F5F5F5',
   height: '100%',
+  width: '100%',
   display: 'flex',
   justifyContent: 'center'
 }
@@ -12,11 +19,14 @@ export const body = {
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      entrants: ['df', 'sdf', 'das']
+    }
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     Object.assign(document.body.style, body)
+    Object.assign(document.getElementById('root').style, root)
   }
 
   handleChange(state) {
@@ -24,7 +34,7 @@ class App extends Component {
   }
 
   render() {
-    return <div>Hello World!!!</div>
+    return <Bracket entrants={this.state.entrants} />
   }
 }
 export default App
