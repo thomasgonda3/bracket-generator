@@ -20,7 +20,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      entrants: ['df', 'sdf', 'das']
+      entrants: ['df', 'sdfasd', 'das']
     }
   }
 
